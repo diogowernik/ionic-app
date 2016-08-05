@@ -32,6 +32,16 @@ angular.module('yogabrasilia', ['ionic', 'yogabrasilia.controllers', 'yogabrasil
       }
     }
   })
+  
+  .state('tab.wall', {
+    url: '/wall',
+    views: {
+      'tab-wall': {
+        templateUrl: 'templates/tab-wall.html',
+        controller: 'WallCtrl'
+      }
+    }
+  })
 
   .state('tab.chats', {
       url: '/chats',
