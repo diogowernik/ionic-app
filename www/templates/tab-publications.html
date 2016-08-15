@@ -1,7 +1,9 @@
 <ion-view view-title="Mural do Yoga">
-  <ion-content class="padding">
-    <h2><center>Em construção</h2><center>
-        <p>Aqui vai uma lista de publicações</p>
-        <p>Buscar do link: <a href="http://yoga.brasilia.io/publications/from-subdomain/1.json">Mural do Yoga (Json)</a></p>
+  <ion-content>
+    <div class="list">
+      <ion-item ng-repeat="publication in publications | orderBy:'title' | orderBy:'id'">
+        {{ publication.title }}
+      </ion-item>
+    </div>
   </ion-content>
 </ion-view>

@@ -1,7 +1,10 @@
 <ion-view view-title="Professorers e Estúdios">
-  <ion-content class="padding">
-    <h2><center>Em construção</h2><center>
-        <p>Aqui vai uma lista de professores e estúdios de yoga</p>
-        <p>Buscar do link: <a href="http://yoga.brasilia.io/cards/from-subdomain/1.json">Professores e Estúdios (Json)</a></p>
+  <ion-content>
+    <div class="list">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="card in cards | orderBy:'name' | orderBy:'id'" >
+        <img ng-src="{{card.cover.cover.url}}">
+        {{ card.name }}
+      </ion-item>
+    </div>
   </ion-content>
 </ion-view>
