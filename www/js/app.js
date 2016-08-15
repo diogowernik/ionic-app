@@ -23,22 +23,22 @@ angular.module('yogabrasilia', ['ionic', 'yogabrasilia.controllers', 'yogabrasil
     templateUrl: 'templates/tabs.html'
   })
 
-  .state('tab.search', {
-    url: '/encontrar',
+  .state('tab.cards', {
+    url: '/cards',
     views: {
-      'tab-search': {
-        templateUrl: 'templates/tab-search.html',
-        controller: 'SearchCtrl'
+      'tab-cards': {
+        templateUrl: 'templates/tab-cards.html',
+        controller: 'CardsCtrl'
       }
     }
   })
   
-  .state('tab.wall', {
-    url: '/wall',
+  .state('tab.publications', {
+    url: '/publications',
     views: {
-      'tab-wall': {
-        templateUrl: 'templates/tab-wall.html',
-        controller: 'WallCtrl'
+      'tab-publications': {
+        templateUrl: 'templates/tab-publications.html',
+        controller: 'PublicationsCtrl'
       }
     }
   })
@@ -73,6 +73,6 @@ angular.module('yogabrasilia', ['ionic', 'yogabrasilia.controllers', 'yogabrasil
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/encontrar');
+  $urlRouterProvider.otherwise('/tab/cards');
 
 });
